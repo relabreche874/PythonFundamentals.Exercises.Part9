@@ -11,15 +11,18 @@ def read_json(file_path):
 
 read_json(file_path)
 
-#
-# def read_all_json_files():
-#     json_list = []
-#     json_list.append(read_json(file_path))
-#
-#
-#
-# def write_pickle():
-#     pass
-#
-# def load_pickle():
-#     pass
+
+def read_all_json_files():
+    json_list = []
+    json_list.append(read_json(file_path))
+    return json_list
+
+read_all_json_files()
+
+
+
+def write_pickle():
+    pass
+
+def load_pickle():
+    pass
