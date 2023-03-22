@@ -22,10 +22,11 @@ read_all_json_files()
 data = ['Shy Guy', 'Isabelle', 'Bowzer']
 
 def write_pickle(data, file_path):
-    with open('super_smash_characters.pickle', 'wb') as file:
-        pickle.dump(data, open(file, 'wb'))
+    with open(file_path, 'wb') as file:
+        pickle.dump(data, file)
 
-write_pickle(data, file_path)
 
 def load_pickle(file_path):
-    return pickle.load(file_path, 'rb')
+    with open(file_path, 'rb') as file:
+        data = pickle.load(file)
+    return file
